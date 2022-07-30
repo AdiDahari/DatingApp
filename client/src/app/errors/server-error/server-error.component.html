@@ -1,0 +1,19 @@
+<h4>Internal Server Error - Refresh the page and check internet connection!</h4>
+<ng-container *ngIf="error">
+  <h5 class="text-danger">Error: {{ error.message }}</h5>
+  <p class="font-weight-bold">
+    Note: Angular is not responsible of this error!
+  </p>
+  <p>Optional solutions:</p>
+  <ol>
+    <li>Open the Developer Tools</li>
+    <li>Inspect 'Network' tab</li>
+    <li>Check failed Requests</li>
+    <li>Examine Request's URL for validity</li>
+    <li>Try using Postman for checking server connection</li>
+  </ol>
+  <p>Stack Trace:</p>
+  <code class="mt-5" style="background-color: whitesmoke">{{
+    error.details
+  }}</code>
+</ng-container>
