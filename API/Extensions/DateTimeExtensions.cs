@@ -9,10 +9,8 @@ namespace API.Extensions
     {
         public static int CalculateAge(this DateTime dob)
         {
-            var today = DateTime.Today;
-            var age = today.Year - dob.Year;
-            if (dob.Date > today.AddYears(-age)) --age;
-
+            int age = 0;
+            age = DateTime.Now.AddYears(-dob.Year).Year;
             return age;
         }
     }
