@@ -29,6 +29,13 @@ namespace API.Data.Migrations
                 defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
 
             migrationBuilder.AddColumn<DateTime>(
+                name: "LastActive",
+                table: "Users",
+                type: "TEXT",
+                nullable: false,
+                defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
+
+            migrationBuilder.AddColumn<DateTime>(
                 name: "DateOfBirth",
                 table: "Users",
                 type: "TEXT",
@@ -108,6 +115,10 @@ namespace API.Data.Migrations
 
             migrationBuilder.DropColumn(
                 name: "Created",
+                table: "Users");
+
+            migrationBuilder.DropColumn(
+                name: "LastActive",
                 table: "Users");
 
             migrationBuilder.DropColumn(
